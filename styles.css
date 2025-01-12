@@ -1,0 +1,134 @@
+* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(125, 69%, 54%);
+    padding: 1rem;
+    color: hsl(98, 71%, 57%);
+    border-style: groove;
+    
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    align-self: last baseline;
+    color: black;
+    border-radius: 0%;
+      }
+
+.logo.image{
+    border-image-width: auto;
+    border-image-slice: fill;
+    align-self: center;
+    border-radius: 20%;
+
+}
+
+header nav {
+    display:block;
+    gap: 1rem;
+}
+
+header nav a {
+    color: #ac3c3c;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #ffc107;
+    margin: 40px;
+}
+
+body {
+    background-color: #37cf23;
+    color: #ac3c3c;
+}
+
+/* Main content styling */
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    color: #f00f0f;
+}
+
+main .text-content {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+main .image-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Footer styling */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+footer .social-media a {
+    color: white;
+    margin-left: 1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer .social-media a:hover {
+    color: #0078d7;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 1025px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Bonus: Transition for resizing */
+header, main, footer {
+    transition: all 0.3s ease-in-out;
+}
